@@ -1,4 +1,4 @@
-<?php namespace Evanriper\Honeys;
+<?php namespace Happyclicker\Honeys;
 
 use Illuminate\Support\ServiceProvider;
 

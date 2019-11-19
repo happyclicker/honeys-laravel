@@ -1,4 +1,4 @@
-<?php namespace Evanriper\Honeys;
+<?php namespace Happyclicker\Honeys;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
