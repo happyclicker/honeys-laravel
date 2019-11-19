@@ -1,0 +1,26 @@
+{
+    "name": "evanriper/honeys-laravel",
+    "description": "Laravel Wrapper package to communicate with Honey's Place API",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Erik Van Riper",
+            "email": "erik@happyclicker.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Evanriper\\Honeys\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Evanriper\\Honeys\\HoneysServiceProvider"
+            ]
+        }
+    }
+}
