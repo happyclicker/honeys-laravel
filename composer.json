@@ -24,5 +24,8 @@
                 "Happyclicker\\Honeys\\HoneysServiceProvider"
             ]
         }
+    },
+    "require-dev": {
+        "laravel/framework": "5.5.x"
     }
 }
