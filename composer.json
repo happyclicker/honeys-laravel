@@ -13,14 +13,17 @@
     },
     "autoload": {
         "psr-4": {
-            "Happyclicker\\Honeys\\": "src/"
+            "Happyclicker\\Honeys\\": "./src"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
                 "Happyclicker\\Honeys\\HoneysServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "Honeys": "Happyclicker\\Honeys\\Facade"
+            }
         }
     },
     "minimum-stability": "dev",
