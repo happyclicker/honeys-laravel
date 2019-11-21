@@ -16,8 +16,6 @@
             "Happyclicker\\Honeys\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "extra": {
         "laravel": {
             "providers": [
@@ -25,7 +23,6 @@
             ]
         }
     },
-    "require-dev": {
-        "laravel/framework": "5.5.x"
-    }
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
