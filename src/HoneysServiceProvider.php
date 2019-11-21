@@ -1,8 +1,6 @@
 <?php namespace Happyclicker\Honeys;
 
-use Illuminate\Support\ServiceProvider;
-
-class HoneysServiceProvider extends ServiceProvider
+class HoneysServiceProvider extends \Illuminate\Support\ServiceProvider
 {
 
     public function boot()
@@ -15,5 +13,7 @@ class HoneysServiceProvider extends ServiceProvider
         $this->app->singleton(Honeys::class, function() use ($options) {
               return new Honeys($options);
         });
+
+        $this->app->alias(Honeys::class, 'honeys');
     }
 }
