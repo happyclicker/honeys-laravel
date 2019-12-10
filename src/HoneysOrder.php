@@ -5,7 +5,7 @@ use GuzzleHttp\Exception\GuzzleException;
 
 class HoneysOrder extends Honeys
 {
-    public $body;
+    protected $body;
 
     public function __construct($options = [])
     {
@@ -34,6 +34,9 @@ class HoneysOrder extends Honeys
                 'query' => ['xmldata' => $this->body]
                 ]);
 
+            $this->response_code = $res->getStatusCode();
+            $this->response_message = $res->getReasonPhrase();
+            $this->response_data = $res->getBody()->getContents();
             return(response()->json([
                 'code' => $res->getStatusCode(),
                 'message' => $res->getReasonPhrase(),

@@ -6,6 +6,10 @@ class Honeys
     public $account;
     public $api_token;
 
+    protected $response_code;
+    protected $response_message;
+    protected $response_data;
+
     function __construct($options = [])
     {
         $this->bootstrap($options);
@@ -23,6 +27,21 @@ class Honeys
             $this->account = $options['account'];
             $this->api_token = $options['api_key'];
         }
+    }
+
+    public function getResponseCode()
+    {
+        return $this->response_code;
+    }
+
+    public function getResponseMessage()
+    {
+        return $this->response_message;
+    }
+
+    public function getResponseData()
+    {
+        return $this->response_data;
     }
 
 }

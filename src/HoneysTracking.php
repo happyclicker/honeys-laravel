@@ -23,6 +23,10 @@ class HoneysTracking extends Honeys
                 'query' => ['xmldata' => $body],
                 ]);
 
+            $this->response_code = $res->getStatusCode();
+            $this->response_message = $res->getReasonPhrase();
+            $this->response_data = $res->getBody()->getContents();
+
             return(response()->json([
                 'code' => $res->getStatusCode(),
                 'message' => $res->getReasonPhrase(),
