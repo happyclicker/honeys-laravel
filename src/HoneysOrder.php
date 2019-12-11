@@ -24,7 +24,6 @@ class HoneysOrder extends Honeys
 
     public function submitOrder()
     {
-
         $client = new Client([
             'base_uri' => $this->base_url
         ]);
