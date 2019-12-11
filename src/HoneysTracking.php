@@ -19,7 +19,7 @@ class HoneysTracking extends Honeys
         ]);
 
         try {
-            $res = $client->request('GET', 'ws', [
+            $res = $client->get('ws', [
                 'query' => ['xmldata' => $body],
                 ]);
 

@@ -29,13 +29,14 @@ class HoneysOrder extends Honeys
         ]);
 
         try {
-            $res = $client->request('GET', 'ws', [
+            $res = $client->get('ws', [
                 'query' => ['xmldata' => $this->body]
                 ]);
 
             $this->response_code = $res->getStatusCode();
             $this->response_message = $res->getReasonPhrase();
             $this->response_data = $res->getBody()->getContents();
+
             return(response()->json([
                 'code' => $res->getStatusCode(),
                 'message' => $res->getReasonPhrase(),

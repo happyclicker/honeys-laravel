@@ -9,6 +9,8 @@ class Honeys
     protected $response_code;
     protected $response_message;
     protected $response_data;
+    protected $uri;
+    protected $query_string;
 
     function __construct($options = [])
     {
@@ -42,6 +44,16 @@ class Honeys
     public function getResponseData()
     {
         return $this->response_data;
+    }
+
+    public function getURI()
+    {
+        return $this->uri;
+    }
+
+    public function getQuery_string()
+    {
+        return $this->query_string;
     }
 
 }
