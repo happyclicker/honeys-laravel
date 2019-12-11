@@ -9,6 +9,7 @@ class Honeys
     protected $response_code;
     protected $response_message;
     protected $response_data;
+    protected $response_body;
     protected $uri;
     protected $query_string;
 
@@ -44,6 +45,11 @@ class Honeys
     public function getResponseData()
     {
         return $this->response_data;
+    }
+
+    public function getResponseBody()
+    {
+        return $this->response_body;
     }
 
     public function getURI()
