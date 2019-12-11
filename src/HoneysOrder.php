@@ -30,7 +30,7 @@ class HoneysOrder extends Honeys
         ]);
 
         try {
-            $res = $client->request('GET', [
+            $res = $client->request('GET', 'ws', [
                 'query' => ['xmldata' => $this->body]
                 ]);
 
