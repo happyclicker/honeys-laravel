@@ -29,10 +29,10 @@ class HoneysTracking extends Honeys
             $this->response_body = $res->getBody();
 
             return(response()->json([
-                'code' => $res->getStatusCode(),
-                'message' => $res->getReasonPhrase(),
-                'data' => $res->getBody()->getContents(),
-                'body' => $res->getBody()
+                'code' => $this->response_code,
+                'message' => $this->response_message,
+                'data' => $this->response_data,
+                'body' => $this->response_body
             ]));
         } catch (GuzzleException $e) {
             // Handle the errors

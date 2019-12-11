@@ -38,9 +38,10 @@ class HoneysOrder extends Honeys
             $this->response_data = $res->getBody()->getContents();
 
             return(response()->json([
-                'code' => $res->getStatusCode(),
-                'message' => $res->getReasonPhrase(),
-                'data' => $res->getBody()->getContents()
+                    'code' => $this->response_code,
+                    'message' => $this->response_message,
+                    'data' => $this->response_data,
+                    'body' => $this->response_body
             ]));
         } catch (GuzzleException $e) {
             // Handle the errors
